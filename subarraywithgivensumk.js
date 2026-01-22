@@ -18,3 +18,29 @@ for ( i = 0; i < a.length; i++){
 }
 
 console.log(subArray)
+
+
+// optimal sol prefix sum method
+// function prefixSum(a, t) {
+//   let map = new Map();
+//   map.set(0, 1);
+
+//   let currentSum = 0;
+//   let totalCount = 0;
+
+//   for (let i = 0; i < a.length; i++) {
+//     currentSum += a[i];
+
+//     let need = currentSum - t;
+
+//     if (map.has(need)) {
+//       totalCount += map.get(need); // VERY important
+//     }
+
+//     map.set(currentSum, (map.get(currentSum) || 0) + 1);
+//   }
+
+//   return totalCount;
+// }
+
+// console.log(prefixSum([2, 12, -2, -20, 10], -10)); 
