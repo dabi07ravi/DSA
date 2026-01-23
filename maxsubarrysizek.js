@@ -23,5 +23,40 @@ console.log(a.slice(start, start+k))
 
 
 
+// brute force approach 
+
+
+// function maxSubArraySum(a, k) {
+//   let maxSubArray = [];
+//   let maxSum = 0;
+
+//   function maxSubArrayCal(b) {
+//     for (let i = 0; i < b.length; i++) {
+//       let sum = 0;
+//       for (let j = i; j < b.length; j++) {
+//         sum = sum + b[j];
+
+//         if (sum > maxSum) {
+//           maxSum = sum;
+//           maxSubArray = b.slice(i, j + 1);
+//         }
+//       }
+//     }
+//   }
+
+//   for (let i = 0; i <= a.length - k; i++) {
+//     let subArray = a.slice(i, k + i);
+//     maxSubArrayCal(subArray);
+//   }
+
+//   return {maxSubArray,maxSum}
+// }
+
+// console.log(maxSubArraySum([1, 2, 3, 4], 2));
+// [2, 3, -8, 7, -1, 2, 3]
+
+
+
+
 
 
