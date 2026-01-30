@@ -42,41 +42,44 @@
 
 
 
-function longestPalindrome(s) {
 
-    let maxLen = 1
-    let start = 0
-    let count = 0
+function longestPalindrome(str){
 
+  let maxLen = -Infinity;
+  let count = 0
+  let startIndex = 0
 
-    function expand(left, right) {
-        while (left >= 0 && right < s.length && s[left] === s[right]) {
-            count++
+  function expand(left,right){
 
-            let len = right - left + 1
+      while(left >=0 && right < str.length && str[left] === str[right]){
+        let len = right - left + 1;
 
-            if (len > maxLen) {
-                maxLen = len
-                start = left
-            }
-
-            left--
-            right++
+        if(len > maxLen){
+          maxLen = len
+          startIndex = left
+          count++
         }
 
-    }
+        left--
+        right++
+      }
+
+  }
 
 
-    for (i = 0; i < s.length; i++) {
+  for (i=0; i < str.length; i++){
+        expand(i,i) // odd len
+        expand(i,i+1) // even len
+  }
 
-        expand(i, i) // odd
-        expand(i, i + 1) // even
-    }
 
-
-    return { count, len: maxLen, str: s.slice(start, start + maxLen) }
+  return {count, maxLen, subStrng: str.slice(startIndex, startIndex+maxLen)}
 
 }
 
 
+
+
 console.log(longestPalindrome("babad")); // "bab" or "aba"
+
+
