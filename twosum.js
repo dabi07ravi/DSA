@@ -20,19 +20,40 @@
 
 // two sum optimal
 
-let a = [2, 11, 15, 7];
-let target = 9;
-let indices = [];
+// let a = [2, 11, 15, 7];
+// let target = 9;
+// let indices = [];
 
-let map = new Map();
+// let map = new Map();
 
-for (i = 0; i < a.length; i++) {
-  let need = target - a[i];
-  if (map.has(need)) {
-    indices.push(i, map.get(need));
-  }
+// for (i = 0; i < a.length; i++) {
+//   let need = target - a[i];
+//   if (map.has(need)) {
+//     indices.push(i, map.get(need));
+//   }
 
-  map.set(a[i], i);
-}
+//   map.set(a[i], i);
+// }
 
-console.log(indices);
+// console.log(indices);
+
+
+// two sum without map
+
+
+// let i = 0;
+// let j = i + 1;
+// while (i < j) {
+//   let sum = a[i] + a[j];
+//   if (sum === target) {
+//     indices.push([a[i], a[j]]);
+//     i++;
+//     j--;
+//   } else if (sum < target) {
+//     i++;
+//   } else {
+//     j--;
+//   }
+// }
+
+// console.log(indices);
