@@ -57,3 +57,6 @@
 // }
 
 // console.log(indices);
+
+
+// two sum and count pair are same but only idff is in two sum duplicate allowed but in count pair sun duplicate not allowed
