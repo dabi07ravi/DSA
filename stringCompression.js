@@ -1,5 +1,5 @@
 let str = 'aabccccc'
-let res = ''
+let res = []
 
 
 
@@ -15,10 +15,10 @@ for (i=0; i < str.length; i++){
 
 map.forEach((values, keys) => {
 
-    res = `${res}${keys}${values}`
+    res.push(keys+values)
 })
 
 
-console.log(res)
+console.log(res.join(''))
 
 
