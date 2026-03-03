@@ -24,7 +24,7 @@ for (let i = 0; i < a.length; i++) {
 
   while (map.has(prevNum) && map.get(prevNum) === false) {
     currentLen = currentLen + 1;
-    map.set(nextNum, true);
+    map.set(prevNum, true);
 
     prevNum--;
   }
