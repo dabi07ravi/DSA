@@ -35,3 +35,25 @@ for (let i = 0; i < a.length; i++) {
 }
 
 console.log(maxLength);
+
+
+
+// let a = [100,4,200,1,3,2];
+// let maxLength = 0
+
+
+// for (i=0; i < a.length; i++){
+//         let next = a[i] + 1
+//         let currentLen = 1
+
+//         while(a.includes(next)){
+//             next++
+//             currentLen++
+//         }
+
+
+//         maxLength = Math.max(maxLength, currentLen)
+// }
+
+
+// console.log(maxLength)
