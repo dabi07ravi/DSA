@@ -19,7 +19,7 @@ function allSubstrings(str) {
         }
     }
 
-    return max;
+return max;
 }
 
 console.log(allSubstrings("abcabcbb")); // ✅ 3
